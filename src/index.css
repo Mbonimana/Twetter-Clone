@@ -2,123 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Twitter Clone Design System - All colors, gradients, fonts, etc defined here */
+/* LinkedIn Clone Design System - Dark Mode */
 
 @layer base {
   :root {
-    /* Twitter-inspired color palette */
-    --background: 0 0% 100%;
-    --foreground: 217 19% 27%;
+    /* LinkedIn Dark Mode Palette */
+    --background: 215 28% 8%;
+    --foreground: 210 40% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 217 19% 27%;
+    --card: 217 28% 12%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 217 19% 27%;
+    --popover: 217 28% 12%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 212 100% 48%;
+    --primary: 206 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 212 100% 45%;
+    --primary-hover: 206 100% 45%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 217 19% 27%;
+    --secondary: 215 25% 16%;
+    --secondary-foreground: 210 40% 90%;
 
-    --muted: 220 13% 95%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 215 25% 16%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 212 100% 97%;
-    --accent-foreground: 212 100% 48%;
+    --accent: 215 25% 20%;
+    --accent-foreground: 210 40% 95%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 212 100% 48%;
+    --border: 215 25% 20%;
+    --input: 215 25% 16%;
+    --ring: 206 100% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Twitter-specific design tokens */
-    --twitter-blue: 212 100% 48%;
-    --twitter-blue-hover: 212 100% 45%;
-    --twitter-blue-light: 212 100% 97%;
-    --tweet-hover: 0 0% 97%;
-    --gray-50: 220 13% 98%;
-    --gray-100: 220 13% 95%;
-    --gray-200: 220 13% 91%;
-    --gray-300: 220 9% 84%;
-    --gray-400: 220 9% 69%;
-    --gray-500: 220 9% 46%;
-    --gray-600: 217 19% 35%;
-    --gray-700: 217 19% 27%;
-    --gray-800: 217 19% 18%;
-    --gray-900: 217 19% 12%;
+    /* LinkedIn-specific design tokens */
+    --linkedin-blue: 206 100% 50%;
+    --linkedin-blue-hover: 206 100% 45%;
+    --linkedin-blue-light: 206 100% 95%;
+    --post-hover: 215 25% 18%;
+    --nav-hover: 215 25% 22%;
+    
+    /* Grays for LinkedIn styling */
+    --gray-50: 210 40% 95%;
+    --gray-100: 215 25% 90%;
+    --gray-200: 215 25% 80%;
+    --gray-300: 215 20% 65%;
+    --gray-400: 215 15% 50%;
+    --gray-500: 215 15% 40%;
+    --gray-600: 215 20% 30%;
+    --gray-700: 215 25% 20%;
+    --gray-800: 215 28% 12%;
+    --gray-900: 215 28% 8%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--twitter-blue)), hsl(var(--twitter-blue-hover)));
-    --gradient-hover: linear-gradient(135deg, hsl(var(--twitter-blue-hover)), hsl(var(--twitter-blue)));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--linkedin-blue)), hsl(var(--linkedin-blue-hover)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(215 25% 14%));
 
     /* Shadows */
-    --shadow-tweet: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-card: 0 2px 8px 0 rgb(0 0 0 / 0.15);
+    --shadow-hover: 0 4px 12px 0 rgb(0 0 0 / 0.2);
 
     /* Animations */
     --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -133,43 +82,71 @@
 }
 
 @layer components {
-  /* Tweet component styles */
-  .tweet-container {
-    @apply bg-card border-b border-border p-4 transition-colors duration-200 hover:bg-muted/30 cursor-pointer;
+  /* LinkedIn Post component styles */
+  .post-container {
+    @apply bg-card border border-border rounded-lg p-4 transition-all duration-200 hover:shadow-hover cursor-pointer;
+    box-shadow: var(--shadow-card);
   }
   
-  .tweet-avatar {
-    @apply w-12 h-12 rounded-full object-cover;
+  .post-avatar {
+    @apply w-12 h-12 rounded-full object-cover border-2 border-gray-700;
   }
   
-  .tweet-content {
+  .post-content {
     @apply text-foreground leading-relaxed;
   }
   
-  .tweet-actions {
-    @apply flex items-center gap-8 mt-3 text-muted-foreground;
+  .post-actions {
+    @apply flex items-center justify-between mt-4 pt-3 border-t border-border text-muted-foreground;
   }
   
-  .tweet-action {
-    @apply flex items-center gap-2 text-sm transition-colors duration-200 hover:text-accent-foreground;
+  .post-action {
+    @apply flex items-center gap-2 text-sm transition-all duration-200 hover:text-primary hover:bg-accent px-3 py-2 rounded-lg;
   }
   
-  /* Navigation styles */
-  .nav-item {
-    @apply flex items-center gap-4 p-3 rounded-full transition-all duration-200 hover:bg-muted text-foreground font-medium;
+  /* LinkedIn Navigation styles */
+  .nav-header {
+    @apply bg-card border-b border-border px-4 py-2 sticky top-0 z-50;
+    box-shadow: var(--shadow-card);
   }
   
-  .nav-item-active {
-    @apply bg-accent text-accent-foreground;
+  .nav-item-linkedin {
+    @apply flex flex-col items-center gap-1 p-2 transition-all duration-200 hover:bg-accent rounded-lg text-muted-foreground hover:text-foreground text-xs;
+  }
+  
+  .nav-item-active-linkedin {
+    @apply text-primary;
+  }
+  
+  /* LinkedIn Sidebar styles */
+  .sidebar-card {
+    @apply bg-card border border-border rounded-lg overflow-hidden;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .profile-card {
+    @apply relative bg-gradient-to-br from-primary/20 to-primary/5;
+  }
+  
+  .profile-cover {
+    @apply h-16 bg-gradient-to-r from-primary to-primary-hover;
+  }
+  
+  .profile-avatar {
+    @apply w-16 h-16 rounded-full border-4 border-card object-cover absolute -bottom-8 left-1/2 transform -translate-x-1/2;
   }
   
   /* Button variants */
-  .btn-tweet {
-    @apply bg-primary text-primary-foreground px-8 py-2 rounded-full font-semibold transition-all duration-200 hover:bg-primary/90 shadow-sm;
+  .btn-linkedin {
+    @apply bg-primary text-primary-foreground px-6 py-2 rounded-full font-semibold transition-all duration-200 hover:bg-primary-hover shadow-sm;
   }
   
-  .btn-ghost {
-    @apply text-muted-foreground hover:text-foreground transition-colors duration-200;
+  .btn-linkedin-outline {
+    @apply border border-primary text-primary px-6 py-2 rounded-full font-semibold transition-all duration-200 hover:bg-primary hover:text-primary-foreground;
+  }
+  
+  .btn-ghost-linkedin {
+    @apply text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-200 px-3 py-2 rounded-lg;
   }
 }
 
@@ -181,8 +158,8 @@
     -webkit-text-fill-color: transparent;
   }
   
-  .shadow-tweet {
-    box-shadow: var(--shadow-tweet);
+  .shadow-card {
+    box-shadow: var(--shadow-card);
   }
   
   .shadow-hover {
@@ -195,5 +172,9 @@
   
   .transition-spring {
     transition: var(--transition-spring);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
   }
 }
